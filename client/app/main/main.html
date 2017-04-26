@@ -1,11 +1,73 @@
-<header class="hero-unit" id="banner">
-  <div class="container">
-    <h1>'Allo, 'Allo!</h1>
-    <p class="lead">Kick-start your next web app with Angular Fullstack</p>
-    <img src="assets/images/yeoman.png" alt="I'm Yeoman">
-  </div>
-</header>
+<!--<header class="hero-unit" id="banner">-->
+  <!--<div class="container">-->
+    <!--<h1>'Allo, 'Allo!</h1>-->
+    <!--<p class="lead">Kick-start your next web app with Angular Fullstack</p>-->
+    <!--<img src="assets/images/yeoman.png" alt="I'm Yeoman">-->
+  <!--</div>-->
+<!--</header>-->
+<form class="thing-form">
+  <label>Syncs in realtime across clients</label>
+  <p class="input-group">
+    <input type="text" class="form-control" placeholder="Add a new thing here." ng-model="$ctrl.newThing">
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" ng-click="$ctrl.addThing()">Add New</button>
+      </span>
+  </p>
+</form>
 
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="boxes">
+        <div class="col-md-4" ng-repeat="thing in $ctrl.awesomeThings">
+
+          <!--Card-->
+          <div class="card card-cascade wider"  >
+
+            <!--Card image-->
+            <div class="view overlay hm-white-slight">
+              <ul>
+                <li class=" glyphicon glyphicon-remove"></li>
+              </ul>
+              <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%2813%29.jpg" class="img-fluid">
+              <a href="#!">
+                <div class="mask waves-effect waves-light"></div>
+              </a>
+            </div>
+            <!--/Card image-->
+
+            <!--Card content-->
+            <div class="card-block text-center" >
+              <!--Title-->
+              <!--<br>-->
+              <h4 class="card-title"><strong>{{thing.name}}</strong></h4>
+              <!--<h5>Photographer</h5>-->
+
+              <!--<p class="card-text">-->
+                <!--Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem aperiam.-->
+              <!--</p>-->
+
+              <!--Dribbble-->
+              <!--<a class="icons-sm drib-ic"><i class="fa fa-dribbble"> </i></a>-->
+              <!--Linkedin-->
+              <!--<a class="icons-sm li-ic"><i class="fa fa-linkedin"> </i></a>-->
+              <!--Google +-->
+              <!--<a class="icons-sm gplus-ic"><i class="fa fa-google-plus"> </i></a>-->
+              <!--Instagram-->
+              <!--<a class="icons-sm ins-ic"><i class="fa fa-instagram"> </i></a>-->
+              <!--<br>-->
+            </div>
+            <!--/.Card content-->
+
+          </div>
+          <!--/.Card-->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div><hr>
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
@@ -15,14 +77,6 @@
       </ul>
     </div>
   </div>
-
-  <form class="thing-form">
-    <label>Syncs in realtime across clients</label>
-    <p class="input-group">
-      <input type="text" class="form-control" placeholder="Add a new thing here." ng-model="$ctrl.newThing">
-      <span class="input-group-btn">
-        <button type="submit" class="btn btn-primary" ng-click="$ctrl.addThing()">Add New</button>
-      </span>
-    </p>
-  </form>
 </div>
+
+

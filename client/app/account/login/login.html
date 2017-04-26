@@ -1,47 +1,75 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-12">
-      <h1>Login</h1>
-      <p>Accounts are reset on server restart from <code>server/config/seed.js</code>. Default account is <code>test@example.com</code> / <code>test</code></p>
-      <p>Admin account is <code>admin@example.com</code> / <code>admin</code></p>
-    </div>
-    <div class="col-sm-12">
-      <form class="form" name="form" ng-submit="vm.login(form)" novalidate>
+    <div class="card login-main col-lg-offset-3">
+      <div class="card-block login-card">
 
-        <div class="form-group">
-          <label>Email</label>
-
-          <input type="email" name="email" class="form-control" ng-model="vm.user.email" required>
+        <!--Header-->
+        <div class="form-header blue-gradient text-center login" ng-model="vm.user.email">
+          <h3><i class="fa fa-lock"></i> Login:</h3>
         </div>
+        <form class="form" name="form" ng-submit="vm.login(form)" novalidate>
 
-        <div class="form-group">
-          <label>Password</label>
+          <!--Body-->
+          <div class="form-group">
+            <div class="md-form input-main">
+              <i class="fa fa-envelope prefix"></i>
+              <input type="text" id="form2" class="form-control login-input" required>
+              <label for="form2" class="label">Your email</label>
+            </div>
+          </div>
 
-          <input type="password" name="password" class="form-control" ng-model="vm.user.password" required>
-        </div>
-
-        <div class="form-group has-error">
-          <p class="help-block" ng-show="form.email.$error.required && form.password.$error.required && vm.submitted">
-             Please enter your email and password.
-          </p>
-          <p class="help-block" ng-show="form.email.$error.email && vm.submitted">
-             Please enter a valid email.
-          </p>
-
-          <p class="help-block">{{ vm.errors.login }}</p>
-        </div>
-
-        <div>
-          <button class="btn btn-inverse btn-lg btn-login" type="submit">
-            Login
-          </button>
-          <a class="btn btn-default btn-lg btn-register" ui-sref="signup">
-            Register
-          </a>
-        </div>
-
-      </form>
+          <div class="form-group">
+            <div class="md-form input-main">
+              <i class="fa fa-lock prefix"></i>
+              <input type="password" id="form4" class="form-control login-input" ng-model="vm.user.password" required>
+              <label for="form4" class="label">Your password</label>
+            </div>
+          </div>
+          <div class="text-center ">
+            <button type="submit" class="btn btn-login waves-effect login-button  animated fadeInLeft" >Login</button>
+            <a class="btn btn-default btn-lg btn-register reg-button animated fadeInRight" ui-sref="signup">Register</a>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
-  <hr>
 </div>
+
+
+
+    <!--<div class="card-block">-->
+      <!--<div class="col-sm-12">-->
+        <!--<h1>Login</h1>-->
+      <!--</div>-->
+      <!--<div class="col-sm-12">-->
+        <!--<form class="form" name="form" ng-submit="vm.login(form)" novalidate>-->
+
+          <!--<div class="form-group">-->
+            <!--<label>Email</label>-->
+            <!--<input type="email" name="email" class="form-control" ng-model="vm.user.email" required>-->
+          <!--</div>-->
+          <!--<div class="form-group">-->
+            <!--<label>Password</label>-->
+            <!--<input type="password" name="password" class="form-control" ng-model="vm.user.password" required>-->
+          <!--</div>-->
+          <!--<div class="form-group has-error">-->
+            <!--<p class="help-block" ng-show="form.email.$error.required && form.password.$error.required && vm.submitted">-->
+              <!--Please enter your email and password.-->
+            <!--</p>-->
+            <!--<p class="help-block" ng-show="form.email.$error.email && vm.submitted">-->
+              <!--Please enter a valid email.-->
+            <!--</p>-->
+            <!--<p class="help-block">{{ vm.errors.login }}</p>-->
+          <!--</div>-->
+          <!--<div>-->
+            <!--<button class="btn btn-inverse btn-lg btn-login" type="submit">-->
+              <!--Login-->
+            <!--</button>-->
+            <!--<a class="btn btn-default btn-lg btn-register" ui-sref="signup">-->
+              <!--Register-->
+            <!--</a>-->
+          <!--</div>-->
+        <!--</form>-->
+      <!--</div>-->
+    <!--</div>-->
+
